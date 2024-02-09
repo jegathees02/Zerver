@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" class="cmmz3">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zerver</title>
+    <link rel="icon" href="../src/images/logo/logoSq.png" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body class="c4f4x cnihn cs2bp c55gg czrq6">
+    <div class="crm2f cbvce cxgh5 cfebz c4agq">
+      <header class="ca5ue ca0gw cverl">
+        <div class="co3q6 csm51 csya4 ccyhi">
+          <div class="cm7bi c2sao c4jjw c4agq cm0fl">
+            <div class="ci0vw">
+              <!-- Logo -->
+              <a class="cwban" href="index.html" aria-label="Cruip">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                  src="https://cdn.lordicon.com/hmqggwrl.json"
+                  trigger="loop"
+                  delay="2000"
+                  colors="primary:#19243d,secondary:#c69cf4"
+                  style="width: 50px; height: 50px"
+                >
+                </lord-icon>
+                <img
+                  class="cbdyn"
+                  src="../src/images/logo/logoZ.png"
+                  width="150"
+                  height="50"
+                  alt="Stellar"
+                />
+              </a>
+            </div>
+            <include src="./partials/chatbot.html"></include>
+            <ul class="c2sao cq21c ci0vw c4agq">
+              <li>
+                <a
+                  class="cz30y c0z2s cit3o cx3jz ccqx1 cgi3a cqxsj cvdvu"
+                  href="signin.html"
+                  >Sign in</a
+                >
+              </li>
+            </ul>
+            <div class="c2sao c89zz cwap3 c4agq" x-data="{ expanded: false }">
+              <button
+                class="c381v"
+                :class="{ 'active': expanded }"
+                @click.stop="expanded = !expanded"
+                aria-controls="mobile-nav"
+                :aria-expanded="expanded"
+              >
+                <span class="cmmna">Menu</span>
+                <svg
+                  class="c0z2s cit3o cm1cr cx3jz cgi3a cqxsj csq2q c7vsq"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect y="2" width="20" height="2" rx="1"></rect>
+                  <rect y="9" width="20" height="2" rx="1"></rect>
+                  <rect y="16" width="20" height="2" rx="1"></rect>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content -->
+      <main class="c9wgl">
+        <!-- Hero -->
+        <section>
+          <div style="background-color: rgba(0, 0, 0, 0.3)">
+            <div
+              class="co3q6 c27r3 csm51 csya4 ccyhi"
+              style="padding-bottom: 50px"
+            >
+              <!-- Particles animation -->
+              <div class="ca5ue cwmqr ch67j" aria-hidden="true">
+                <canvas data-particle-animation=""></canvas>
+              </div>
+              <!-- Illustration -->
+              <div
+                class="c3sb3 czwja cbvce ca5ue cwmqr cv9w8 ch67j"
+                aria-hidden="true"
+              >
+                <div class="c2vxt c3x17 ca5ue c2s0w ch67j">
+                  <img
+                    src="../src/images/icon/glow-bottom.svg"
+                    class="cbdyn"
+                    width="2146"
+                    height="774"
+                    alt="Hero Illustration"
+                  />
+                </div>
+              </div>
+              <div class="chhmv cbcs7 ceyts cp02i">
+                <!-- Hero content -->
+                <div class="cw9su c80wd csya4">
+                  <div class="cr8dw" data-aos="fade-down">
+                    <div class="cnna9 c1mpe ccqfq ctaxy cwban c27r3">
+                      <a
+                        class="cfhua c272e cpm5o c8isz c0z2s c1mpe ccqfq cit3o cx3jz cgi3a cqxsj c27r3 coqcu cfl4k c1xwr cq2yg"
+                        href="#0"
+                      >
+                        <span class="c2sao cwban c27r3">
+                          Graphs Speak Louder Than Raw Data
+                          <span
+                            class="c9pof c406y cxxyq c3fbv cx3jz cgi3a cqzh1"
+                            >-&gt;</span
+                          >
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <h1
+                    class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez cvc1j cbmj0"
+                    data-aos="fade-down"
+                  >
+                    Server Logging
+                  </h1>
+                  <p
+                    class="cit3o cbgr1 cpvtt"
+                    data-aos="fade-down"
+                    data-aos-delay="200"
+                  >
+                    Where every line is a story waiting to be told, and every
+                    error is a plot twist.
+                  </p>
+                  <div
+                    class="cpp4l c9wnx ckigx cmcsl csko9 cavuv chcps csya4"
+                    data-aos="fade-down"
+                    data-aos-delay="400"
+                  >
+                    <div>
+                      <a
+                        class="ccqrz cl7hu colil csdcv cpy2n cx3jz cgi3a cqxsj cdccy ca0gw cq2yg cyijk"
+                        href="dashboard.html"
+                      >
+                        Get Started
+                        <span class="c9pof c406y cxxyq c3fbv cx3jz cgi3a cqzh1"
+                          >-&gt;</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Features -->
+        <section style="position: relative; overflow: hidden">
+          <div
+            class="co3q6 c27r3 csm51 csya4 ccyhi"
+            style="backdrop-filter: blur(100px)"
+          >
+            <!-- Illustration -->
+            <div
+              class="c3sb3 c6jr6 cbvce ca5ue cwmqr cv9w8 ch67j"
+              aria-hidden="true"
+            >
+              <div class="c2vxt c3x17 ca5ue cl6qg ch67j">
+                <img
+                  src="../src/images/icon/glow-top.svg"
+                  class="cbdyn"
+                  width="1404"
+                  height="658"
+                  alt="Features Illustration"
+                />
+              </div>
+            </div>
+            <div class="c9eon cbcs7 cifrc cc3g6">
+              <div x-data="{ tab: '1' }">
+                <!-- Section content -->
+                <div
+                  class="c384i c2hl3 c4dcx c64wf cgmv7 ctxt1 cuidr cyciu c38ok cfebz csya4 c4agq"
+                >
+                  <!-- Content -->
+                  <div
+                    class="c2y0a cfei9 c2id4 c9j74 ciof7"
+                    data-aos="fade-down"
+                  >
+                    <!-- Content #1 -->
+                    <div>
+                      <div
+                        class="ccqrz c6df8 ccal6 cuygr ctwez cwban ccqx1 c6wvq"
+                      >
+                        Server Log System
+                      </div>
+                    </div>
+                    <h3 class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez c6wvq c6m3m">
+                      Establishing a Server log system
+                    </h3>
+                    <p class="cmuyi cbgr1 cpvtt">
+                      Server log systemfor E-governance with appropriate notification and content based classification of log AICTE
+                    </p>
+                  </div>
+                  <!-- Image -->
+                  <div
+                    class="c4cgf c9j74"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="c27r3 cqdf3 cqvoe">
+                      <!-- Particles animation -->
+                      <div class="ca5ue cwmqr ch67j">
+                        <canvas
+                          data-particle-animation=""
+                          data-particle-quantity="8"
+                          data-particle-staticity="30"
+                        ></canvas>
+                      </div>
+                      <div class="csqqr c2sao c4agq">
+                        <div class="csqqr c2sao c27r3 c4agq crp11 c0xl9">
+                          <!-- Halo effect -->
+                          <svg
+                            class="cqczd c3sb3 c2vxt czyer c3x17 cclua ca5ue cqv5f cwmqr cu3s3"
+                            width="480"
+                            height="480"
+                            viewBox="0 0 480 480"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <defs>
+                              <linearGradient
+                                id="pulse-a"
+                                x1="50%"
+                                x2="50%"
+                                y1="100%"
+                                y2="0%"
+                              >
+                                <stop offset="0%" stop-color="#A855F7"></stop>
+                                <stop
+                                  offset="76.382%"
+                                  stop-color="#FAF5FF"
+                                ></stop>
+                                <stop offset="100%" stop-color="#6366F1"></stop>
+                              </linearGradient>
+                            </defs>
+                            <g fill-rule="evenodd">
+                              <path
+                                class="cbmx5"
+                                fill="url(#pulse-a)"
+                                fill-rule="evenodd"
+                                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+                              ></path>
+                              <path
+                                class="cubym cbmx5"
+                                fill="url(#pulse-a)"
+                                fill-rule="evenodd"
+                                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+                              ></path>
+                              <path
+                                class="chxkd cbmx5"
+                                fill="url(#pulse-a)"
+                                fill-rule="evenodd"
+                                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+                              ></path>
+                            </g>
+                          </svg>
+                          <!-- Grid -->
+                          <div
+                            class="cwu6b c3sb3 c2vxt czyer cbvce cdfzt czyps c3584 c3x17 cclua ca5ue cqv5f cwmqr"
+                          >
+                            <div class="c2vo5 cs79m">
+                              <div class="cwkka cxqwr cnq12 ca5ue cwmqr"></div>
+                              <div class="c1uh7 ca5ue cwmqr"></div>
+                              <div class="cb8y7 cxqwr cnq12 ca5ue cwmqr"></div>
+                              <div class="cilw6 ca5ue cwmqr"></div>
+                            </div>
+                          </div>
+                          <!-- Icons -->
+                          <div
+                            x-show="tab === '1'"
+                            x-transition:enter="cqxsj cft38 c97ew cm6k3"
+                            x-transition:enter-start="croy4 c48ms"
+                            x-transition:enter-end="c32rm ch656"
+                            x-transition:leave="cqxsj cft38 c97ew ca5ue"
+                            x-transition:leave-start="c32rm ch656"
+                            x-transition:leave-end="croy4 c52mo"
+                          >
+                            <div
+                              class="c3d7q cegg3 cn2kl cy8oh cltb2 c1mpe ccqfq csqqr c2sao cck9i ctnsh c27r3 cn544 c4agq cm0fl c0ho4"
+                            >
+                              <svg
+                                class="c0gs1 c27r3"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="23"
+                                height="25"
+                              >
+                                <path
+                                  fill-rule="nonzero"
+                                  d="M10.55 15.91H.442L14.153.826 12.856 9.91h10.107L9.253 24.991l1.297-9.082Zm.702-8.919L4.963 13.91h7.893l-.703 4.918 6.289-6.918H10.55l.702-4.918Z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            x-show="tab === '2'"
+                            x-transition:enter="cqxsj cft38 c97ew cm6k3"
+                            x-transition:enter-start="croy4 c48ms"
+                            x-transition:enter-end="c32rm ch656"
+                            x-transition:leave="cqxsj cft38 c97ew ca5ue"
+                            x-transition:leave-start="c32rm ch656"
+                            x-transition:leave-end="croy4 c52mo"
+                          >
+                            <div
+                              class="c3d7q cegg3 cn2kl cy8oh cltb2 c1mpe ccqfq csqqr c2sao cck9i ctnsh c27r3 cn544 c4agq cm0fl c0ho4"
+                            >
+                              <svg
+                                class="c0gs1 c27r3"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                              >
+                                <path
+                                  d="M18 14h-2V8h2c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4v2H8V4c0-2.2-1.8-4-4-4S0 1.8 0 4s1.8 4 4 4h2v6H4c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-2h6v2c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4ZM16 4c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2h-2V4ZM2 4c0-1.1.9-2 2-2s2 .9 2 2v2H4c-1.1 0-2-.9-2-2Zm4 14c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2h2v2ZM8 8h6v6H8V8Zm10 12c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2s-.9 2-2 2Z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            x-show="tab === '3'"
+                            x-transition:enter="cqxsj cft38 c97ew cm6k3"
+                            x-transition:enter-start="croy4 c48ms"
+                            x-transition:enter-end="c32rm ch656"
+                            x-transition:leave="cqxsj cft38 c97ew ca5ue"
+                            x-transition:leave-start="c32rm ch656"
+                            x-transition:leave-end="croy4 c52mo"
+                          >
+                            <div
+                              class="c3d7q cegg3 cn2kl cy8oh cltb2 c1mpe ccqfq csqqr c2sao cck9i ctnsh c27r3 cn544 c4agq cm0fl c0ho4"
+                            >
+                              <svg
+                                class="c0gs1 c27r3"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="26"
+                                height="14"
+                              >
+                                <path
+                                  fill-rule="nonzero"
+                                  d="m10 5.414-8 8L.586 12 10 2.586l6 6 8-8L25.414 2 16 11.414z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features #2 -->
+        <section class="c27r3">
+          <!-- Particles animation -->
+          <div class="c2vxt c3x17 ca5ue cj7es c4cc0 cl6qg ch67j clxo2 cck8s">
+            <div class="ca5ue cwmqr ch67j" aria-hidden="true">
+              <canvas
+                data-particle-animation=""
+                data-particle-quantity="6"
+                data-particle-staticity="30"
+              ></canvas>
+            </div>
+          </div>
+          <div class="co3q6 csm51 csya4 ccyhi">
+            <div class="cuyom cc3g6">
+              <!-- Section header -->
+              <div class="cw9su c80wd c9eon csya4 cifrc">
+                <h2 class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez cvc1j c4zau">
+                  Smarter. Better.
+                </h2>
+                <p class="cmuyi cbgr1">
+                  There are many variations of server logging systems available, but the majority of them can't do what we do. We are the future of server logging
+                </p>
+              </div>
+              <div class="c9eon c27r3 cifrc">
+                <div
+                  class="c3sb3 c2vxt cp4r7 c3x17 ca5ue c2s0w c7upq cjfxx"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="434"
+                    height="427"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="bs2-a"
+                        x1="19.609%"
+                        x2="50%"
+                        y1="14.544%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="#6366F1"></stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#6366F1"
+                          stop-opacity="0"
+                        ></stop>
+                      </linearGradient>
+                    </defs>
+                    <path
+                      fill="url(#bs2-a)"
+                      fill-rule="evenodd"
+                      d="m346 898 461 369-284 58z"
+                      transform="translate(-346 -898)"
+                    ></path>
+                  </svg>
+                </div>
+                <!-- Grid -->
+                <div class="cdt18 cvti0 cq2yg c68vp" data-highlighter="">
+                  <!-- Box #1 -->
+                  <div class="co7wv" data-aos="fade-down">
+                    <div
+                      class="cp2di c08y9 cnkqm coqle c272e cdmwi c41c6 cuuka cuehh c5tlw cnna9 c8isz ct0cz c3dq6 c5aca c1mpe cjfiv cj8zu cbvce cngbt ciw4n cww36 cmy5g cco6z cfetr cmpox c260e cyayz c27r3 ck8nf c0cl2"
+                    >
+                      <div class="chrsn cbvce cs2bp c27r3 ck8nf ccxsu">
+                        <div class="c0pfd c16ty cuidr cfebz c4agq">
+                          <!-- Blurred shape -->
+                          <div
+                            class="ca5ue c7upq c96me cl6qg"
+                            aria-hidden="true"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="342"
+                              height="393"
+                            >
+                              <defs>
+                                <linearGradient
+                                  id="bs-a"
+                                  x1="19.609%"
+                                  x2="50%"
+                                  y1="14.544%"
+                                  y2="100%"
+                                >
+                                  <stop offset="0%" stop-color="#6366F1"></stop>
+                                  <stop
+                                    offset="100%"
+                                    stop-color="#6366F1"
+                                    stop-opacity="0"
+                                  ></stop>
+                                </linearGradient>
+                              </defs>
+                              <path
+                                fill="url(#bs-a)"
+                                fill-rule="evenodd"
+                                d="m104 .827 461 369-284 58z"
+                                transform="translate(0 -112.827)"
+                                opacity=".7"
+                              ></path>
+                            </svg>
+                          </div>
+                          <!-- Radial gradient -->
+                          <div
+                            class="c3sb3 c2vxt colir csqqr c21zy c2sao c3x17 ca5ue c2s0w ck8nf ch67j c4agq"
+                            aria-hidden="true"
+                          >
+                            <div
+                              class="c9ua1 chor7 cw2sl cdfzt cutr4 ca5ue cwmqr"
+                            ></div>
+                            <div
+                              class="chor7 cpgjj cyo6y cdfzt ca5ue chosp cgi8e"
+                            ></div>
+                          </div>
+                          <!-- Text -->
+                          <div
+                            class="cens0 cfei9 cl3jq cerjr ciof7 cnk07 c68q6 c95xw"
+                          >
+                            <div class="crdb2">
+                              <div>
+                                <h3
+                                  class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez cwban cflos cskrr cwj8y"
+                                >
+                                Real Time Updates and Data Visulaization
+                                </h3>
+                                <p class="cmuyi">
+                                  Powered by Web Sockets and Optimized for data vizulaisation using publish and subscribe technology and graphical vizualiser technology 
+                                </p>
+                              </div>
+                            </div>
+                            <div>
+                              <a
+                                class="c3d7q c272e cegg3 c8isz c0z2s c1mpe ccqfq cit3o cx3jz cgi3a cqxsj c27r3 cfl4k cq2yg"
+                                href="#0"
+                              >
+                                <span class="c2sao cwban c27r3">
+                                  Learn more
+                                  <span
+                                    class="c9pof c406y cxxyq c3fbv cx3jz cgi3a cqzh1"
+                                    >-&gt;</span
+                                  >
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- Image -->
+                          <div class="cbvce cx14a c27r3 ca0gw cbc5q">
+                            <img
+                              class="c2vxt ccau4 c1jg2 cbdyn ciu5f c3x17 ca5ue c2s0w csya4"
+                              src="../src/images/icon/security.svg"
+                              width="500"
+                              height="100"
+                              alt="Feature 01"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Box #2 -->
+                  <div class="cjp51" data-aos="fade-down">
+                    <div
+                      class="cp2di c08y9 cnkqm coqle c272e cdmwi c41c6 cuuka cuehh c5tlw cnna9 c8isz ct0cz c3dq6 c5aca c1mpe cjfiv cj8zu cbvce cngbt ciw4n cww36 cmy5g cco6z cfetr cmpox c260e cyayz c27r3 ck8nf c0cl2"
+                    >
+                      <div class="chrsn cbvce cs2bp c27r3 ck8nf ccxsu">
+                        <div class="cfebz c4agq">
+                          <!-- Radial gradient -->
+                          <div
+                            class="c3sb3 c2vxt colir c21zy c3x17 ca5ue c2s0w c02j2 ch67j"
+                            aria-hidden="true"
+                          >
+                            <div
+                              class="chor7 cal1k cdfzt cmy5g ca5ue cwmqr"
+                            ></div>
+                          </div>
+                          <!-- Text -->
+                          <div
+                            class="cens0 cfei9 cl3jq ciof7 cnk07 c68q6 c95xw"
+                          >
+                            <div>
+                              <h3
+                                class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez cwban cflos cskrr cwj8y"
+                              >
+                              Centralised
+                              </h3>
+                              <p class="cmuyi">
+                                No matter how many servers or the type of server, Zerver is compatible with all types of logs.
+
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Image -->
+                          <div class="cbvce cx14a c27r3 c9c67 ca0gw cbc5q">
+                            <img
+                              class="c2vxt ccau4 csrg2 c1jg2 cbdyn ciu5f c3x17 ca5ue c2s0w csya4"
+                              src="../src/images/icon/server.svg"
+                              width="300"
+                              height="200"
+                              alt="Feature 02"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Box #3 -->
+                  <div class="ckb7e" data-aos="fade-down">
+                    <div
+                      class="cp2di c08y9 cnkqm coqle c272e cdmwi c41c6 cuuka cuehh c5tlw cnna9 c8isz ct0cz c3dq6 c5aca c1mpe cjfiv cj8zu cbvce cngbt ciw4n cww36 cmy5g cco6z cfetr cmpox c260e cyayz c27r3 ck8nf c0cl2"
+                    >
+                      <div class="chrsn cbvce cs2bp c27r3 ck8nf ccxsu">
+                        <div class="cfebz c4agq">
+                          <!-- Radial gradient -->
+                          <div
+                            class="c3sb3 c2vxt colir c21zy c3x17 ca5ue c2s0w c02j2 ch67j"
+                            aria-hidden="true"
+                          >
+                            <div
+                              class="chor7 cal1k cdfzt cmy5g ca5ue cwmqr"
+                            ></div>
+                          </div>
+                          <!-- Text -->
+                          <div
+                            class="cens0 cfei9 cl3jq ciof7 cnk07 c68q6 c95xw"
+                          >
+                            <div>
+                              <h3
+                                class="cc7gh ccqrz cx8zw c6df8 cfcmr ctwez cwban cflos cskrr cwj8y"
+                              >
+                              Customized Dashboard
+                              </h3>
+                              <p class="cmuyi">
+                                Overwhelemd by the information provided to you? Choose just what suits YOUR needs. No one size fits all.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- Image -->
+                          <div class="cbvce cx14a c27r3 c9c67 ca0gw cbc5q">
+                            <img
+                              class="c2vxt ccau4 csrg2 c1jg2 cbdyn ciu5f c3x17 ca5ue c2s0w csya4"
+                              src="../src/images/icon/customize.svg"
+                              width="230"
+                              height="230"
+                              alt="Feature 03"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Site footer -->
+      <footer>
+        <div class="flex justify-center">
+          <!-- Blocks -->
+          <div class="w-[50%] ml-150 mt-5">
+            <!-- 1st block -->
+            <div class="cbwex c4g3l c5tjy ciof7 mr-auto">
+              <div class="cm7bi cacyx c32lj cfebz ck8nf c4agq">
+                <div class="cx0x3 cuash">
+                  <div class="cuash">
+                    <!-- Logo -->
+                    <a class="cwban" href="index.html" aria-label="Cruip">
+                      <img
+                        src="../src/images/logo/logoZ.png"
+                        width="200"
+                        height="200"
+                        alt="Stellar"
+                      />
+                    </a>
+                  </div>
+                  <!-- <div class="cit3o cvdvu">
+                    © Zerver.com <span class="cgzoy">-</span> All rights
+                    reserved.
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 2nd block -->
+            <!-- <div class="cdq95 cel2w cg678">
+              <h6 class="c8azi ccqx1 cvdvu cawjf">Products</h6>
+              <ul class="ccea9 cvdvu">
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Integrations</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Pricing &amp; Plans</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Changelog</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Our method</a
+                  >
+                </li>
+              </ul>
+            </div> -->
+
+            <!-- 3rd block -->
+            <!-- <div class="cdq95 cel2w cg678">
+              <h6 class="c8azi ccqx1 cvdvu cawjf">Company</h6>
+              <ul class="ccea9 cvdvu">
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Diversity &amp; Inclusion</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0">Blog</a>
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0">Careers</a>
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Financial statements</a
+                  >
+                </li>
+              </ul>
+            </div> -->
+
+            <!-- 4th block -->
+            <!-- <div class="cdq95 cel2w cg678">
+              <h6 class="c8azi ccqx1 cvdvu cawjf">Resources</h6>
+              <ul class="ccea9 cvdvu">
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Community</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Terms of service</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Report a vulnerability</a
+                  >
+                </li>
+              </ul>
+            </div> -->
+
+            <!-- 5th block -->
+            <!-- <div class="cdq95 cel2w cg678">
+              <h6 class="c8azi ccqx1 cvdvu cawjf">Legals</h6>
+              <ul class="ccea9 cvdvu">
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Refund policy</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Privacy policy</a
+                  >
+                </li>
+                <li>
+                  <a class="ciok5 cmuyi cx3jz cgi3a cqxsj" href="#0"
+                    >Brand Kit</a
+                  >
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <title>Settings</title>
+  </head>
+
+  <body
+    x-data="{ page: 'settings', 'loaded': true, 'darkMode': true, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false, 'logs': false, 'health': false, 'performance': false, 'security': false }"
+    x-init="
+          darkMode = JSON.parse(localStorage.getItem('darkMode'));
+          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark text-bodydark bg-boxdark-2': darkMode === true}"
+  >
+    <include src="./partials/preloader.html"></include>
+    <div class="flex h-screen overflow-hidden">
+      <include src="./partials/sidebar.html"></include>
+      <div
+        class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
+      >
+        <include src="./partials/header.html" />
+        <main>
+          <include src="./partials/chatbot.html"></include>
+          <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+            <div
+              class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <h2 class="text-title-md2 font-bold text-black dark:text-cement">
+                Settings Page
+              </h2>
+
+              <nav>
+                <ol class="flex items-center gap-2">
+                  <li>
+                    <a class="font-medium" href="index.html">Dashboard /</a>
+                  </li>
+                  <li class="font-medium text-lavendar2">Settings</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div
+                class="rounded-sm border border-stroke bg-white py-6 px-5.5 dark:border-strokedark dark:bg-boxdark"
+              >
+                <div
+                  class="border-b border-stroke py-4 px-7 dark:border-strokedark"
+                >
+                  <h3 class="font-medium text-black dark:text-cement">
+                    Configurations
+                  </h3>
+                </div>
+                <div class="p-7">
+                  <div class="mb-13.5 flex flex-col gap-5.5 sm:flex-row">
+                    <div class="sm:full w-full">
+                      <div class="range mx-auto">
+                        <div class="form-group range__value" style="margin-left: 50px;">
+                          <label
+                            for="cpuThreshold"
+                            class="dark:text-cement text-body"
+                            >Cpu Threshold</label
+                          >
+                          <span
+                            id="cpuThresholdValue"
+                            class="text-black dark:text-cement"
+                            >80</span
+                          >
+                        </div>
+                        <div class="form-group range__slider">
+                          <input
+                            type="range"
+                            step="1"
+                            class="slider"
+                            id="cpuThreshold"
+                            min="0"
+                            max="100"
+                            value="20"
+                          />
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-13.5 flex flex-col items-center justify-center gap-5.5 sm:flex-row"
+                  >
+                    <div class="sm:full">
+                      <div class="range">
+                        <div class="form-group range__value">
+                          <label
+                            for="cpuThreshold"
+                            class="dark:text-cementn text-body"
+                            >Memory Threshold</label
+                          >
+                          <span
+                            id="diskThresholdValue"
+                            class="text-black dark:text-cement"
+                          ></span>
+                        </div>
+                        <div class="form-group range__slider">
+                          <input
+                            type="range"
+                            step="1"
+                            class="slider"
+                            id="memoryThreshold"
+                            min="0"
+                            max="100"
+                            value="20"
+                          />
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-13.5 flex flex-col items-center justify-center gap-5.5 sm:flex-row"
+                  >
+                    <div class="sm:full">
+                      <div class="range">
+                        <div class="form-group range__value">
+                          <label
+                            for="vulnerabilities"
+                            class="dark:text-cementn text-body"
+                            >Number of Vulnerabilities</label
+                          >
+                          <span
+                            id="temperaureValue"
+                            class="text-black dark:text-cement"
+                          ></span>
+                        </div>
+                        <div class="form-group range__slider">
+                          <input
+                            type="range"
+                            step="1"
+                            class="slider"
+                            id="vulnerabilities"
+                            min="0"
+                            max="100"
+                            value="20"
+                          />
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col items-center justify-center gap-5.5 sm:flex-row"
+                  >
+                    <div class="sm:full">
+                      <div class="range">
+                        <div class="form-group range__value">
+                          <label
+                            for="errorload"
+                            class="text-body dark:text-cement"
+                            >Error Load</label
+                          >
+                          <span
+                            id="criticalLogsValue"
+                            class="text-black dark:text-cement"
+                          ></span>
+                        </div>
+                        <div class="form-group range__slider">
+                          <input
+                            type="range"
+                            step="1"
+                            class="slider"
+                            id="errorload"
+                            min="0"
+                            max="100"
+                            value="20"
+                          />
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="rounded-sm border border-stroke bg-white py-6 px-5.5 dark:border-strokedark dark:bg-boxdark"
+                >
+                  <div
+                    class="border-b border-stroke py-4 px-7 dark:border-strokedark"
+                  >
+                    <h3 class="font-medium text-black dark:text-cement">
+                      Make your Adjustments
+                    </h3>
+                  </div>
+                  <div class="p-7">
+                    <div
+                      class="flex flex-col items-center justify-center gap-5.5 sm:flex-row"
+                    >
+                    <div class="sm:full">
+                      <div class="container">
+                        <div class="input-group">
+                          <label for="errorload" class="text-black dark:text-white">Select Option</label>
+                          <select id="errorload" class="dropdown">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                          </select>
+                        </div>
+                        <div class="input-group">
+                          <label for="threshold" class="text-black dark:text-white">Threshold</label>
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="w-fit">
+              <div class="cr8dw2" data-aos="fade-down">
+                <div class="overflow-hidden">
+                  <a
+                    class="cfhua2 c272e cpm5o c8isz c0z2s c1mpe ccqfq cit3o cx3jz cgi3a cqxsj c27r3 coqcu cfl4k c1xwr cq2yg"
+                    style="width: 100px;height: 50px; margin-right: 20px;"
+                    href="#0"
+                  >
+                    <span class="c2sao cwban c27r3">
+                      Cancel
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-fit">
+              <div class="cr8dw2" data-aos="fade-down">
+                <div class="overflow-hidden">
+                  <a
+                    class="cfhua c272e cpm5o c8isz c0z2s c1mpe ccqfq cit3o cx3jz cgi3a cqxsj c27r3 coqcu cfl4k c1xwr cq2yg"
+                    style="width: 100px;height: 50px;"
+                    href="#0"
+                  >
+                    <span class="c2sao cwban c27r3">
+                      Save
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      class Slider {
+        constructor(rangeElement, valueElement) {
+          this.rangeElement = rangeElement;
+          this.valueElement = valueElement;
+
+          this.rangeElement.addEventListener(
+            "input",
+            this.updateSlider.bind(this)
+          );
+        }
+
+        init() {
+          this.updateSlider();
+        }
+
+        updateSlider() {
+          this.valueElement.textContent = this.rangeElement.value + "%";
+          this.rangeElement.style = this.generateBackground();
+        }
+
+        generateBackground() {
+          if (this.rangeElement.value === this.rangeElement.min) {
+            return;
+          }
+
+          let percentage =
+            ((this.rangeElement.value - this.rangeElement.min) /
+              (this.rangeElement.max - this.rangeElement.min)) *
+            100;
+          return `background: linear-gradient(to right, #50299c, #ba77f9 ${percentage}%, #d3edff ${percentage}%, #dee1e2 100%)`;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const rangeElement = document.getElementById("cpuThreshold");
+        const valueElement = document.getElementById("cpuThresholdValue");
+
+        if (rangeElement && valueElement) {
+          const slider = new Slider(rangeElement, valueElement);
+          slider.init();
+        }
+
+        const rangeElement1 = document.getElementById("memoryThreshold");
+        const valueElement1 = document.getElementById("diskThresholdValue");
+
+        if (rangeElement1 && valueElement1) {
+          const slider1 = new Slider(rangeElement1, valueElement1);
+          slider1.init();
+        }
+
+        const rangeElement2 = document.getElementById("vulnerabilities");
+        const valueElement2 = document.getElementById("temperaureValue");
+
+        if (rangeElement2 && valueElement2) {
+          const slider2 = new Slider(rangeElement2, valueElement2);
+          slider2.init();
+        }
+
+        const rangeElement3 = document.getElementById("errorload");
+        const valueElement3 = document.getElementById("criticalLogsValue");
+
+        if (rangeElement3 && valueElement3) {
+          const slider3 = new Slider(rangeElement3, valueElement3);
+          slider3.init();
+        }
+      });
+    </script>
+  </body>
+</html>
